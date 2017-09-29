@@ -79,16 +79,25 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/29/链表创建头插法与尾插法/">链表创建的头插法与尾插法</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-链表创建的头插法与尾插法"><a href="#title-链表创建的头插法与尾插法" class="headerlink" title="title:链表创建的头插法与尾插法"></a>title:链表创建的头插法与尾插法</h2><p>1.尾插法<br>   list <em>l;//申明一个链表l<br>   list </em>r,<em>h;<br>   int x;<br>   l=(list </em>)malloc(sizeof(list));//生成一个头节点<br>   l-&gt;next=NULL;<br>   r=l;<br>  scanf(“%d”,&amp;x);<br>  while(x!=0)//当输入x不等于0的时候就存于链表<br>  {<br>    h=(list <em>)malloc(sizeof(list));<br>    h-&gt;data=x;<br>    h-&gt;next=NULL;<br>    r-&gt;next=h;<br>    r=h;//始终让r指向尾结点<br>    scanf(“%d”,&amp;x);<br>  }<br>2.尾插法<br>list </em>l,<em>r;<br>l=(list </em>)malloc(sizeof(list));<br>l-&gt;next=NULL;<br>scanf(“%d”,x);<br>while(x!=0)<br>{<br>  r=(list *)malloc(sizeof(list));<br>  r-&gt;data=x;<br>  r-&gt;nenxt=NULL;<br>  r-&gt;next=l-&gt;next;//让r指向L头结点后的那个新区域<br>  l-&gt;next=r;</p>
+        <p>1.尾插法<br>   list <em>l;//申明一个链表l<br>   list </em>r,<em>h;<br>   int x;<br>   l=(list </em>)malloc(sizeof(list));//生成一个头节点<br>   l-&gt;next=NULL;<br>   r=l;<br>  scanf(“%d”,&amp;x);<br>  while(x!=0)//当输入x不等于0的时候就存于链表<br>  {<br>    h=(list <em>)malloc(sizeof(list));<br>    h-&gt;data=x;<br>    h-&gt;next=NULL;<br>    r-&gt;next=h;<br>    r=h;//始终让r指向尾结点<br>    scanf(“%d”,&amp;x);<br>  }<br>2.尾插法<br>list </em>l,<em>r;<br>l=(list </em>)malloc(sizeof(list));<br>l-&gt;next=NULL;<br>scanf(“%d”,x);<br>while(x!=0)<br>{<br>  r=(list *)malloc(sizeof(list));<br>  r-&gt;data=x;<br>  r-&gt;nenxt=NULL;<br>  r-&gt;next=l-&gt;next;//让r指向L头结点后的那个新区域<br>  l-&gt;next=r;</p>
 <p>两者区别:尾插法以升序输入就以升序输出,而头插法以升序输入就要以降序输出,因为每次添加的元素<br>都是作为头结点后的那个元素,所以第一个输入的就会被挤到最后一个去.如果一个以升序输入的链表要<br>以降序输入,那么就可以弄一个新链表,以头插法的方法将升序数据输入,然后输出就是降序.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zlhym.github.io/2017/09/29/链表创建头插法与尾插法/" data-id="cj862t355000240usktvfdrt0" class="article-share-link">Share</a>
+      <a data-url="http://zlhym.github.io/2017/09/29/链表创建头插法与尾插法/" data-id="cj862va5q0002zouss5kbde2r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,7 +138,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zlhym.github.io/2017/09/24/第一次学习记录/" data-id="cj862t34r000040usiah0lmux" class="article-share-link">Share</a>
+      <a data-url="http://zlhym.github.io/2017/09/24/第一次学习记录/" data-id="cj862va5g0000zous7k107rd7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zlhym.github.io/2017/09/24/hello-world/" data-id="cj862t34y000140usxe2otps5" class="article-share-link">Share</a>
+      <a data-url="http://zlhym.github.io/2017/09/24/hello-world/" data-id="cj862va5n0001zousk76trq7h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,7 +227,7 @@
       <ul>
         
           <li>
-            <a href="/2017/09/29/链表创建头插法与尾插法/">(no title)</a>
+            <a href="/2017/09/29/链表创建头插法与尾插法/">链表创建的头插法与尾插法</a>
           </li>
         
           <li>
