@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017 | 我的博客</title>
+  <title>我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一天进步一点点">
-<meta property="og:type" content="website">
+  <meta name="description" content="title: 链表–栈的简单运用 #include #includeusing namespace std;typedef struct node{    int data;    struct node next;}LinkStack;void InitStack(LinkStack &amp;amp;s) {    s = NULL;}void pushStack(LinkStack &amp;amp;s)">
+<meta property="og:type" content="article">
 <meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://zlhym.github.io/archives/2017/index.html">
+<meta property="og:url" content="http://zlhym.github.io/2017/11/28/链表--栈/index.html">
 <meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="一天进步一点点">
+<meta property="og:description" content="title: 链表–栈的简单运用 #include #includeusing namespace std;typedef struct node{    int data;    struct node next;}LinkStack;void InitStack(LinkStack &amp;amp;s) {    s = NULL;}void pushStack(LinkStack &amp;amp;s)">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-28T14:08:17.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的博客">
-<meta name="twitter:description" content="一天进步一点点">
+<meta name="twitter:description" content="title: 链表–栈的简单运用 #include #includeusing namespace std;typedef struct node{    int data;    struct node next;}LinkStack;void InitStack(LinkStack &amp;amp;s) {    s = NULL;}void pushStack(LinkStack &amp;amp;s)">
   
     <link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
   
@@ -67,90 +68,46 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/11/28/链表--栈/" class="archive-article-date">
-  <time datetime="2017-11-28T14:05:20.459Z" itemprop="datePublished">11月 28</time>
+        <section id="main"><article id="post-链表--栈" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/链表--栈/" class="article-date">
+  <time datetime="2017-11-28T14:05:20.459Z" itemprop="datePublished">2017-11-28</time>
 </a>
-      
-    </header>
+    
   </div>
-</article>
-  
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/29/链表创建头插法与尾插法/" class="archive-article-date">
-  <time datetime="2017-09-29T15:18:56.752Z" itemprop="datePublished">9月 29</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/29/链表创建头插法与尾插法/">链表创建的头插法与尾插法</a>
-    </h1>
-  
+        <hr>
+<p>title: 链表–栈的简单运用</p>
+<p>#include<iostream></iostream></p>
+<p>#include<cstdlib><br>using namespace std;<br>typedef struct node<br>{<br>    int data;<br>    struct node <em>next;<br>}</em>LinkStack;<br>void InitStack(LinkStack &amp;s) {<br>    s = NULL;<br>}<br>void pushStack(LinkStack &amp;s) {<br>    int x;<br>    LinkStack p;<br>    cout &lt;&lt; “请输入数据,直到输入-1结束”;<br>    cin &gt;&gt; x;<br>    while (x != -1) {<br>        p = new node;<br>        p-&gt;data = x;<br>        p-&gt;next = s;<br>        s = p;<br>        cin &gt;&gt; x;<br>    }<br>}<br>void popStack(LinkStack &amp;s) {<br>    LinkStack p;<br>    if (s==NULL) {<br>        cout &lt;&lt; “该栈为空” &lt;&lt; endl;<br>    }<br>    while (s!=NULL) {<br>        p = s;<br>        cout &lt;&lt; p-&gt;data&lt;&lt;” “;<br>        s = s-&gt;next;<br>        delete p;<br>    }<br>    cout &lt;&lt; endl;<br>}<br>void DestoryStack(LinkStack &amp;s) {<br>    LinkStack p;<br>    while (s != NULL) {<br>        p = s;<br>        s = s-&gt;next;<br>        delete p;<br>    }<br>}<br>bool StackEmpty(LinkStack &amp;s) {<br>    return s == NULL;<br>}<br>void check(LinkStack &amp;s) {<br>    if (StackEmpty(s)) {<br>        cout &lt;&lt; “该栈为空” &lt;&lt; endl;<br>    }<br>    else {<br>        cout &lt;&lt; “该栈不为空” &lt;&lt; endl;<br>    }<br>}<br>int main() {<br>    LinkStack s;<br>    InitStack(s);<br>    pushStack(s);<br>    check(s);//栈中有数据,检查不为空<br>    popStack(s);//栈的最后一个节点为NULL,所以出栈完全后S指向最后一个节点,所以S==NULL;<br>    check(s);//所以检查为空栈<br>    DestoryStack(s);//此时栈已经在出栈的过程中被销毁<br>    check(s);//所以检查为空<br>    return 0;<br>}</cstdlib></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/24/第一次学习记录/" class="archive-article-date">
-  <time datetime="2017-09-24T13:36:14.015Z" itemprop="datePublished">9月 24</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/24/第一次学习记录/">第一次学习经验</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/24/hello-world/" class="archive-article-date">
-  <time datetime="2017-09-24T10:35:43.410Z" itemprop="datePublished">9月 24</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zlhym.github.io/2017/11/28/链表--栈/" data-id="cjajp7adh00036wuscaugpnhf" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/24/hello-world/">欢迎您,朋友</a>
-    </h1>
-  
-
-    </header>
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/29/链表创建头插法与尾插法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">链表创建的头插法与尾插法</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 
 </section>
         
